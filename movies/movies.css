@@ -1,0 +1,105 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  color: #fff;
+  font-family: Gilroy-Medium;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #141414;
+}
+
+.main {
+  position: relative;
+}
+
+.poster {
+  width: 100vw;
+  height: 75vh;
+
+  /* background-color: grey; */
+  position: relative;
+  display: flex;
+}
+
+.left {
+  /* position: relative; */
+  height: 100%;
+  width: 33%;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  box-shadow: 15px 0 15px rgba(0, 0, 0, 1);
+
+  /* background-color: rgba(0, 0, 0, 0.9); */
+  z-index: 1;
+}
+
+.inner-left {
+  display: flex;
+  flex-direction: column;
+
+  /* background-color: grey; */
+  position: absolute;
+  max-width: 680px;
+  top: 30%;
+  left: 5%;
+  z-index: 2;
+}
+
+.movie-title {
+  max-width: 680px;
+  /* background-color: red; */
+}
+
+.rating-year {
+  display: flex;
+  align-items: center;
+  margin-top: 4%;
+  gap: 20px;
+}
+
+.rating i {
+  color: #2093f1;
+}
+
+.story {
+  max-width: 680px;
+  margin-top: 4%;
+}
+
+.trailer-button button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.right {
+  height: 100%;
+  width: 70%;
+}
+
+.img-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 200px 0 150px rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
