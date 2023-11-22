@@ -25,15 +25,15 @@ body {
 }
 
 /* .trailer-div {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  z-index: 99;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 } */
 
 .space-for-trailer {
@@ -97,7 +97,7 @@ body {
   z-index: 2;
 }
 
-.movie-title {
+.series-title {
   max-width: 680px;
 }
 
@@ -115,7 +115,7 @@ body {
 }
 
 .Stars {
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
   --percent: calc(var(--rating) / 10 * 100%);
   display: inline-block;
   font-size: var(--star-size);
@@ -123,9 +123,13 @@ body {
 }
 
 .Stars::before {
-  content: '\f005 \f005 \f005 \f005 \f005';
+  content: "\f005 \f005 \f005 \f005 \f005";
   letter-spacing: 3px;
-  background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+  background: linear-gradient(
+    90deg,
+    var(--star-background) var(--percent),
+    var(--star-color) var(--percent)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -185,7 +189,6 @@ body {
   /* margin-left: 12px; */
 }
 
-
 .trailer-button button:hover {
   /* background-color: #2f2f2f; */
   background-color: #ff0000;
@@ -211,13 +214,13 @@ body {
   object-fit: cover;
 }
 
-.movies-section {
+.series-section {
   width: 100vw;
   height: 33rem;
   /* background-color: green; */
 }
 
-.movies-explore {
+.series-explore {
   width: 95vw;
   height: 5rem;
   margin: auto;
@@ -228,20 +231,28 @@ body {
   gap: 1rem;
 }
 
-.movies-explore a {
-  text-decoration: none;
-}
-
-.movies-explore p {
+.series-explore p {
   color: #1189e6;
   cursor: pointer;
 }
 
-.movies-explore p:hover {
-  color: #194C75;
+.series-explore p:hover {
+  color: #194c75;
 }
 
 .media-scroll {
+  width: 100vw;
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  /* background-color: green; */
+  overflow-x: auto;
+  overflow-y: auto;
+  gap: 2rem;
+  margin-left: 1rem;
+}
+
+.trending-media-scroll {
   width: 100vw;
   height: 25rem;
   display: flex;
@@ -281,7 +292,7 @@ body {
 .title-div {
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .title-div h5 {
@@ -319,7 +330,7 @@ body {
 }
 
 .rating-progress::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 11rem;
   width: 11rem;
