@@ -22,7 +22,8 @@ async function callTrendingMoviesA_DayBanner() {
 }
 
 async function callTrendingMoviesSlide() {
-  const url = "https://api.themoviedb.org/3/trending/movie/week?language=en-US&page=1";
+  const url =
+    "https://api.themoviedb.org/3/trending/movie/week?language=en-US&page=1";
 
   const options = {
     method: "GET",
@@ -30,7 +31,6 @@ async function callTrendingMoviesSlide() {
       accept: "application/json",
       Authorization:
         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MDkwOTg4YzliMDdlNjUyN2NiYzU2ZDNkMmYxZjhjMSIsInN1YiI6IjY1M2EwMjMzMjRmMmNlMDBjNThhN2VmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.53zqp_-39YTk7DVQivx3c1ZIcGW7JfBOOhVAERqALrc",
-
     },
   };
 
@@ -40,13 +40,13 @@ async function callTrendingMoviesSlide() {
     return result.results;
     // console.log(result.results);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
-
 
 async function callTopratedMoviesSlide() {
-  const url = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
+  const url =
+    "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
 
   const options = {
     method: "GET",
@@ -54,7 +54,6 @@ async function callTopratedMoviesSlide() {
       accept: "application/json",
       Authorization:
         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MDkwOTg4YzliMDdlNjUyN2NiYzU2ZDNkMmYxZjhjMSIsInN1YiI6IjY1M2EwMjMzMjRmMmNlMDBjNThhN2VmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.53zqp_-39YTk7DVQivx3c1ZIcGW7JfBOOhVAERqALrc",
-
     },
   };
 
@@ -64,10 +63,9 @@ async function callTopratedMoviesSlide() {
     return result.results;
     // console.log(result.results);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
-
 
 function generateRandomIndices(max, count) {
   const indices = [];
@@ -90,16 +88,14 @@ async function trendingMoviesA_DayBanner() {
   const randomIndices = generateRandomIndices(trendingMoviesA_Day.length, 1);
 
   for (let i = 0; i < 1; i++) {
-
     // moviesTrailer(trendingMoviesA_Day[randomIndices[i]].id);
 
     const rating = trendingMoviesA_Day[randomIndices[i]].vote_average;
-    document.documentElement.style.setProperty('--rating', rating);
+    document.documentElement.style.setProperty("--rating", rating);
 
     const movieTitle = document.createElement("h1");
     movieTitle.textContent = trendingMoviesA_Day[randomIndices[i]].title;
     movieTitle.classList.add("movie-title");
-
 
     const ratingAndYearDiv = document.createElement("div");
     ratingAndYearDiv.classList.add("rating-year");
@@ -111,7 +107,6 @@ async function trendingMoviesA_DayBanner() {
     yearDiv.classList.add("year");
     const year = document.createElement("p");
     year.textContent = trendingMoviesA_Day[randomIndices[i]].release_date;
-
 
     const storyDiv = document.createElement("div");
     storyDiv.classList.add("story");
@@ -133,7 +128,9 @@ async function trendingMoviesA_DayBanner() {
     const imgInner = document.createElement("div");
     imgInner.classList.add("img-inner");
     const poster = document.createElement("img");
-    poster.src = `${imageURL}${trendingMoviesA_Day[randomIndices[i]].backdrop_path}`;
+    poster.src = `${imageURL}${
+      trendingMoviesA_Day[randomIndices[i]].backdrop_path
+    }`;
 
     innerLeft.appendChild(movieTitle);
 
@@ -155,15 +152,13 @@ async function trendingMoviesA_DayBanner() {
     rightDiv.appendChild(poster);
     posterDiv.appendChild(rightDiv);
 
-
     const trailerBtn = document.querySelector(".trailerBtn");
     trailerBtn.addEventListener("click", () => {
       if (!isMouseClick) {
         moviesTrailer(trendingMoviesA_Day[randomIndices[i]].id);
         isMouseClick = true;
       }
-    })
-
+    });
   }
 }
 
@@ -251,7 +246,6 @@ async function trailerClose() {
   trailerDiv.style.justifyContent = "";
   trailerDiv.style.flexDirection = "";
 
-  
   // Find and remove closeDiv
   const closeDiv = trailerDiv.querySelector(".close");
   if (closeDiv) {
@@ -281,7 +275,7 @@ async function trendingMoviesSlide() {
     wrapper.appendChild(imageDiv);
     const image = document.createElement("img");
     image.src = `${url}${trending[i].poster_path}`;
-    imageDiv.appendChild(image)
+    imageDiv.appendChild(image);
 
     const titleDiv = document.createElement("div");
     titleDiv.classList.add("title-div");
@@ -305,7 +299,7 @@ async function trendingMoviesSlide() {
     ratingProgress.appendChild(ratingValue);
 
     mediaScroll.appendChild(wrapper);
-}
+  }
 }
 
 trendingMoviesSlide();
@@ -324,7 +318,7 @@ async function topratedMoviesSlide() {
     wrapper.appendChild(imageDiv);
     const image = document.createElement("img");
     image.src = `${url}${upcoming[i].poster_path}`;
-    imageDiv.appendChild(image)
+    imageDiv.appendChild(image);
 
     const titleDiv = document.createElement("div");
     titleDiv.classList.add("title-div");
@@ -348,7 +342,20 @@ async function topratedMoviesSlide() {
     ratingProgress.appendChild(ratingValue);
 
     mediaScroll.appendChild(wrapper);
-}
+  }
 }
 
 topratedMoviesSlide();
+
+/**
+ * Add two numbers.
+ * @param {number} num1 The first number.
+ * @param {number} num2 The second number.
+ * @return {number} The sum of the two numbers.
+ */
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+console.log(add());
+

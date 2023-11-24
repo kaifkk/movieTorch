@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-html,
+/* html, */
 body {
   height: 100%;
   width: 100%;
@@ -16,4 +16,105 @@ body {
 
 .main {
   position: relative;
+}
+
+.title {
+  margin: 2rem;
+}
+
+.movies {
+  /* background-color: green; */
+  margin: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+
+.cards {
+  width: 13.4rem;
+  height: 21.5rem;
+  /* background-color: black; */
+  position: relative;
+  transition: 0.4s;
+  margin-top: 1rem;
+}
+
+.image-div img {
+  /* height: 20rem;
+  object-fit: cover; */
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.title-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+  text-align: center;
+}
+
+.title-text {
+  padding: .5rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.title-text h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.rating-div {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  background-color: black;
+  display: none;
+}
+
+.rating-value {
+  position: relative;
+  font-size: 20px;
+}
+
+.rating-progress {
+  position: relative;
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(#2ae863 3.6deg, #ededed15 0deg);
+}
+
+.rating-progress::before {
+  content: '';
+  position: absolute;
+  height: 11rem;
+  width: 11rem;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.cards:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+  .image-div {
+    visibility: hidden;
+  }
+  .rating-div {
+    position: absolute;
+    top: 0;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
