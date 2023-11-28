@@ -65,39 +65,47 @@ async function trendingMovies() {
   const randomIndices = generateRandomIndices(trending.length, 4);
 
   for (let i = 0; i < 4; i++) {
+
+
     const movieCard = document.createElement("div");
     movieCard.classList.add("cards", "card-effect");
 
+
     const imageDiv = document.createElement("div");
     imageDiv.classList.add("imgage-div");
+    movieCard.appendChild(imageDiv);
     const image = document.createElement("img");
     image.src = `${url}${trending[randomIndices[i]].poster_path}`;
     image.classList.add("img");
+    imageDiv.appendChild(image);
 
     const titlediv = document.createElement("div");
     titlediv.classList.add("title-div");
+    movieCard.appendChild(titlediv);
     const title = document.createElement("h5");
     title.textContent = trending[randomIndices[i]].title;
+    titlediv.appendChild(title);
 
+    const tag = document.createElement("a");
+    tag.href = `movies/details/movieDetails.html?id=${trending[randomIndices[i]].id}`;
+    console.log(trending[randomIndices[i]].id);
+    // window.location.href = 'movies/details/movieDetails.html?id=' + trending[randomIndices[i]].id;
+    movieCard.appendChild(tag);
     const ratingDiv = document.createElement("div");
     ratingDiv.classList.add("rating-div");
+    tag.appendChild(ratingDiv);
     const ratingProgress = document.createElement("div");
     ratingProgress.classList.add("rating-progress");
     ratingProgress.style.background = `conic-gradient(#2ae863 ${
       trending[randomIndices[i]].vote_average.toFixed(1) * 10 * 3.6
     }deg, #ededed15 0deg)`;
+    ratingDiv.appendChild(ratingProgress);
     const ratingValue = document.createElement("h3");
     ratingValue.textContent =
       trending[randomIndices[i]].vote_average.toFixed(1);
     ratingValue.classList.add("rating-value");
-
-    movieCard.appendChild(imageDiv);
-    imageDiv.appendChild(image);
-    movieCard.appendChild(titlediv);
-    titlediv.appendChild(title);
-    movieCard.appendChild(ratingDiv);
-    ratingDiv.appendChild(ratingProgress);
     ratingProgress.appendChild(ratingValue);
+
     cardContainer.appendChild(movieCard);
   }
 }

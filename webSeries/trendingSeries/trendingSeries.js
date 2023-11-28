@@ -1,7 +1,7 @@
 document.cookie = "exampleCookie=exampleValue; SameSite=None; Secure";
 
 async function callTrendingMovies(pageNum) {
-  const url = `https://api.themoviedb.org/3/trending/movie/week?language=en-US&page=${pageNum}`;
+  const url = `https://api.themoviedb.org/3/trending/tv/day?language=en-US&page=${pageNum}`;
 
   const options = {
     method: "GET",
@@ -22,7 +22,7 @@ async function callTrendingMovies(pageNum) {
 }
 
 async function totalPages() {
-  const url = `https://api.themoviedb.org/3/trending/movie/week?language=en-US&page=1`;
+  const url = `https://api.themoviedb.org/3/trending/tv/day?language=en-US&page=1`;
 
   const options = {
     method: "GET",
@@ -46,7 +46,7 @@ async function totalPages() {
 // callTrendingMovies();
 async function trendingMovies(pageNum) {
   const trending = await callTrendingMovies(pageNum);
-  const mediaScroll = document.querySelector(".movies");
+  const mediaScroll = document.querySelector(".series");
   const url = "https://image.tmdb.org/t/p/original";
 
   for (let i = 0; i < trending.length; i++) {
@@ -67,43 +67,43 @@ async function trendingMovies(pageNum) {
     titleText.classList.add("title-text");
     titleDiv.appendChild(titleText);
     const title = document.createElement("h4");
-    title.textContent = trending[i].title;
+    title.textContent = trending[i].name;
     titleText.appendChild(title);
 
-    // const ratingDiv = document.createElement("div");
-    // ratingDiv.classList.add("rating-div");
-    // wrapper.appendChild(ratingDiv);
-    // const ratingProgress = document.createElement("div");
-    // ratingProgress.classList.add("rating-progress");
-    // ratingProgress.style.background = `conic-gradient(#2ae863 ${
-    //   trending[i].vote_average.toFixed(1) * 10 * 3.6
-    // }deg, #ededed15 0deg)`;
-    // ratingDiv.appendChild(ratingProgress);
-    // const ratingValue = document.createElement("h3");
-    // ratingValue.classList.add("rating-value");
-    // ratingValue.textContent = trending[i].vote_average.toFixed(1);
-    // ratingProgress.appendChild(ratingValue);
-
-    // mediaScroll.appendChild(wrapper);
-
-    const tag = document.createElement("a");
-    tag.href = `../details/movieDetails.html?id=${trending[i].id}`;
-    wrapper.appendChild(tag);
     const ratingDiv = document.createElement("div");
     ratingDiv.classList.add("rating-div");
-    tag.appendChild(ratingDiv);
+    wrapper.appendChild(ratingDiv);
     const ratingProgress = document.createElement("div");
     ratingProgress.classList.add("rating-progress");
     ratingProgress.style.background = `conic-gradient(#2ae863 ${
-        trending[i].vote_average.toFixed(1) * 10 * 3.6
-      }deg, #ededed15 0deg)`;
+      trending[i].vote_average.toFixed(1) * 10 * 3.6
+    }deg, #ededed15 0deg)`;
     ratingDiv.appendChild(ratingProgress);
-    const ratingValue = document.createElement("div");
+    const ratingValue = document.createElement("h3");
     ratingValue.classList.add("rating-value");
     ratingValue.textContent = trending[i].vote_average.toFixed(1);
     ratingProgress.appendChild(ratingValue);
 
     mediaScroll.appendChild(wrapper);
+
+    // const tag = document.createElement("a");
+    // tag.href = `../../movies/details/movieDetails.html?id=${trending[i].id}`;
+    // wrapper.appendChild(tag);
+    // const ratingDiv = document.createElement("div");
+    // ratingDiv.classList.add("rating-div");
+    // tag.appendChild(ratingDiv);
+    // const ratingProgress = document.createElement("div");
+    // ratingProgress.classList.add("rating-progress");
+    // ratingProgress.style.background = `conic-gradient(#2ae863 ${
+    //     trending[i].vote_average.toFixed(1) * 10 * 3.6
+    //   }deg, #ededed15 0deg)`;
+    // ratingDiv.appendChild(ratingProgress);
+    // const ratingValue = document.createElement("div");
+    // ratingValue.classList.add("rating-value");
+    // ratingValue.textContent = trending[i].vote_average.toFixed(1);
+    // ratingProgress.appendChild(ratingValue);
+
+    // mediaScroll.appendChild(wrapper);
   }
 }
 

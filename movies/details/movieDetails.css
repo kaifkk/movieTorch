@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap');
+
+* {
+  margin: 0%;
+  padding: 0%;
+  color: #fff;
+  /* font-family: Gilroy-Medium; */
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* html, */
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #141414;
+  overflow-x: hidden;
+}
+
+.main {
+  position: relative;
+}
+
+.margin {
+  position: relative;
+  width: 97%;
+  max-width: 1920px;
+  margin-left: 4rem;
+  overflow-x: hidden;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* background-color: green; */
+  justify-content: center;
+}
+
+.details-div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.image-div img {
+  height: 30rem;
+  object-fit: cover;
+  margin-top: 5rem;
+}
+
+.details {
+  position: relative;
+}
+
+.story-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* background-color: green; */
+}
+
+.story-section h2 {
+  margin-top: 4rem;
+}
+
+.story-section p {
+  width: 60rem;
+  text-align: start;
+  line-height: 1.4rem;
+  /* background-color: grey; */
+}
+
+.wrapper {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.section {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.7rem;
+}
+
+.header {
+  width: 10rem;
+  /* background-color: red; */
+}
+
+.imdb-icon {
+  font-size: 1.5rem;
+}
+
+.casts-div {
+  position: relative;
+  margin-top: 7rem;
+  width: 100vw;
+  height: 40rem;
+}
+
+.cast-title {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.casts-wrapper {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  overflow-x: scroll;
+  height: 33rem;
+  /* background-color: green; */
+}
+
+.casts {
+  transition: 0.4s;
+}
+
+.casts:hover {
+  transform: scale(1.03);
+}
+
+.casts img {
+  position: relative;
+  height: 25rem;
+  width: 17rem;
+}
+
+.casts h5 {
+  font-size: 13px;
+  margin-top: .3rem;
+  position: relative;
+  text-align: start;
+}
+
+.casts p {
+  /* font-family: Gilroy-Thin; */
+  margin-top: .3rem;
+  text-align: start;
+  font-weight: 900;
+  font-size: 12px;
+}

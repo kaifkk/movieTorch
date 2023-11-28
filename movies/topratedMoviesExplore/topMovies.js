@@ -1,7 +1,7 @@
 document.cookie = "exampleCookie=exampleValue; SameSite=None; Secure";
 
 async function callTrendingMovies(pageNum) {
-  const url = `https://api.themoviedb.org/3/trending/movie/week?language=en-US&page=${pageNum}`;
+  const url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${pageNum}`;
 
   const options = {
     method: "GET",
@@ -22,7 +22,7 @@ async function callTrendingMovies(pageNum) {
 }
 
 async function totalPages() {
-  const url = `https://api.themoviedb.org/3/trending/movie/week?language=en-US&page=1`;
+  const url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`;
 
   const options = {
     method: "GET",

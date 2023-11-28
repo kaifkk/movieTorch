@@ -9,7 +9,6 @@
   box-sizing: border-box;
 }
 
-/* html, */
 body {
   height: 100%;
   width: 100%;
@@ -46,7 +45,7 @@ body {
 
 .image-div img {
   /* height: 20rem;
-  object-fit: cover; */
+    object-fit: cover; */
   width: 100%;
   height: auto;
   display: block;
@@ -55,13 +54,13 @@ body {
 .title-div {
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   width: 100%;
   text-align: center;
 }
 
 .title-text {
-  padding: .5rem;
+  padding: 0.5rem;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -70,7 +69,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 
 .rating-div {
   width: 100%;
@@ -97,7 +95,7 @@ body {
 }
 
 .rating-progress::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 11rem;
   width: 11rem;

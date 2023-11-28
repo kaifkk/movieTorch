@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap');
+
 * {
   margin: 0%;
   padding: 0%;
   color: #fff;
-  font-family: Gilroy-Medium;
+  /* font-family: Gilroy-Medium; */
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 
@@ -136,7 +139,7 @@ body {
 }
 
 .year p {
-  font-family: Gilroy-Thin;
+  /* font-family: Gilroy-Thin; */
   font-weight: 800;
 }
 
@@ -146,14 +149,14 @@ body {
 }
 
 .story p {
-  max-height: 4rem;
+  max-height: 5rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  font-family: Gilroy-Medium;
-  font-weight: 500;
+  /* font-family: Gilroy-Medium; */
+  font-weight: 400;
 }
 
 .trailer-button {
@@ -170,7 +173,7 @@ body {
   border: none;
   outline: none;
   margin-top: 4%;
-  font-family: Gilroy-Bold;
+  /* font-family: Gilroy-Bold; */
   font-size: 17px;
   cursor: pointer;
   display: flex;
@@ -231,6 +234,10 @@ body {
   gap: 1rem;
 }
 
+.series-explore a {
+  text-decoration: none;
+}
+
 .series-explore p {
   color: #1189e6;
   cursor: pointer;
@@ -278,8 +285,8 @@ body {
 
 .cards {
   width: 13.4rem;
-  height: 21.5rem;
-  background-color: black;
+  height: 21.8rem;
+  /* background-color: black; */
   position: relative;
   transition: 0.4s;
 }

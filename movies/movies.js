@@ -284,16 +284,35 @@ async function trendingMoviesSlide() {
     title.textContent = trending[i].title;
     titleDiv.appendChild(title);
 
+    // const ratingDiv = document.createElement("div");
+    // ratingDiv.classList.add("rating-div");
+    // wrapper.appendChild(ratingDiv);
+    // const ratingProgress = document.createElement("div");
+    // ratingProgress.classList.add("rating-progress");
+    // ratingProgress.style.background = `conic-gradient(#2ae863 ${
+    //   trending[i].vote_average.toFixed(1) * 10 * 3.6
+    // }deg, #ededed15 0deg)`;
+    // ratingDiv.appendChild(ratingProgress);
+    // const ratingValue = document.createElement("h3");
+    // ratingValue.classList.add("rating-value");
+    // ratingValue.textContent = trending[i].vote_average.toFixed(1);
+    // ratingProgress.appendChild(ratingValue);
+
+    // mediaScroll.appendChild(wrapper);
+
+    const tag = document.createElement("a");
+    tag.href = `details/movieDetails.html?id=${trending[i].id}`;
+    wrapper.appendChild(tag);
     const ratingDiv = document.createElement("div");
     ratingDiv.classList.add("rating-div");
-    wrapper.appendChild(ratingDiv);
+    tag.appendChild(ratingDiv);
     const ratingProgress = document.createElement("div");
     ratingProgress.classList.add("rating-progress");
     ratingProgress.style.background = `conic-gradient(#2ae863 ${
-      trending[i].vote_average.toFixed(1) * 10 * 3.6
-    }deg, #ededed15 0deg)`;
+        trending[i].vote_average.toFixed(1) * 10 * 3.6
+      }deg, #ededed15 0deg)`;
     ratingDiv.appendChild(ratingProgress);
-    const ratingValue = document.createElement("h3");
+    const ratingValue = document.createElement("div");
     ratingValue.classList.add("rating-value");
     ratingValue.textContent = trending[i].vote_average.toFixed(1);
     ratingProgress.appendChild(ratingValue);
@@ -327,16 +346,35 @@ async function topratedMoviesSlide() {
     title.textContent = upcoming[i].title;
     titleDiv.appendChild(title);
 
+    // const ratingDiv = document.createElement("div");
+    // ratingDiv.classList.add("rating-div");
+    // wrapper.appendChild(ratingDiv);
+    // const ratingProgress = document.createElement("div");
+    // ratingProgress.classList.add("rating-progress");
+    // ratingProgress.style.background = `conic-gradient(#2ae863 ${
+    //   upcoming[i].vote_average.toFixed(1) * 10 * 3.6
+    // }deg, #ededed15 0deg)`;
+    // ratingDiv.appendChild(ratingProgress);
+    // const ratingValue = document.createElement("h3");
+    // ratingValue.classList.add("rating-value");
+    // ratingValue.textContent = upcoming[i].vote_average.toFixed(1);
+    // ratingProgress.appendChild(ratingValue);
+
+    // mediaScroll.appendChild(wrapper);
+
+    const tag = document.createElement("a");
+    tag.href = `details/movieDetails.html?id=${upcoming[i].id}`;
+    wrapper.appendChild(tag);
     const ratingDiv = document.createElement("div");
     ratingDiv.classList.add("rating-div");
-    wrapper.appendChild(ratingDiv);
+    tag.appendChild(ratingDiv);
     const ratingProgress = document.createElement("div");
     ratingProgress.classList.add("rating-progress");
     ratingProgress.style.background = `conic-gradient(#2ae863 ${
-      upcoming[i].vote_average.toFixed(1) * 10 * 3.6
-    }deg, #ededed15 0deg)`;
+        upcoming[i].vote_average.toFixed(1) * 10 * 3.6
+      }deg, #ededed15 0deg)`;
     ratingDiv.appendChild(ratingProgress);
-    const ratingValue = document.createElement("h3");
+    const ratingValue = document.createElement("div");
     ratingValue.classList.add("rating-value");
     ratingValue.textContent = upcoming[i].vote_average.toFixed(1);
     ratingProgress.appendChild(ratingValue);
@@ -346,16 +384,3 @@ async function topratedMoviesSlide() {
 }
 
 topratedMoviesSlide();
-
-/**
- * Add two numbers.
- * @param {number} num1 The first number.
- * @param {number} num2 The second number.
- * @return {number} The sum of the two numbers.
- */
-function add(num1, num2) {
-  return num1 + num2;
-}
-
-console.log(add());
-
