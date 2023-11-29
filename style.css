@@ -15,6 +15,7 @@ body {
   height: 100%;
   width: 200vw;
   overflow-x: hidden;
+  /* overflow-y: hidden; */
 }
 
 .main {
@@ -176,17 +177,16 @@ body {
 
 .second-fotter {
   position: absolute;
-  left: -2.5%;
-  margin-left: 380px;
+  /* left: -2.5%; */
+  /* margin-left: 380px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 70px;
   height: 40px;
-  /* height: 40vh; */
   width: 35%;
-  /* width: 140vh; */
   bottom: 33px;
+  left: 15vw;
   background: rgba(234, 207, 207, 0.16);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.1px);
@@ -206,14 +206,15 @@ body {
 .fotter {
   /*   position: fixed; */
   position: absolute;
-  left: -2.5%;
-  margin-left: 380px;
+  /* left: -2.5%; */
+  /* margin-left: 380px; */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 28px;
   width: 35%;
+  left: 15vw;
   bottom: 1px;
   background: rgba(234, 207, 207, 0.16);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -280,7 +281,7 @@ body {
   z-index: 1;
 }
 
-.page2-work {
+/* .page2-work {
   position: relative;
   margin: 0 auto;
   margin-right: 13rem;
@@ -288,11 +289,12 @@ body {
   width: 80%;
   height: 100vh;
   max-width: 1920px;
-}
+  border: 1px solid red;
+} */
 
 .h5-wrapper {
   position: absolute;
-  top: 17%;
+  top: 17vh;
   left: 0;
   width: 100%;
   display: flex;
@@ -307,16 +309,120 @@ body {
 
 .card-wrapper {
   position: absolute;
-  top: 52%;
-  right: 0;
+  top: 25rem;
+  right: 5rem;
+  padding: 10px;
   transform: translate(0, -50%);
   display: flex;
   justify-content: space-between;
-  /* gap: 10rem; */
-  width: 100%;
+  width: 88vw;
+  overflow-y: hidden;
+  /* background-color: green; */
 }
 
 .cards {
+  height: 43vh;
+  width: 12.7rem;
+  position: relative;
+}
+
+.image-div {
+  position: relative;
+}
+
+.img {
+  height: 42vh;
+  object-fit: cover;
+}
+
+.title-div {
+  font-size: 15px;
+  position: relative;
+  top: -1rem;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.title-div h5 {
+  display: inline-block;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rating-class {
+  text-decoration: none;
+}
+
+.rating-div {
+  width: 12.7rem;
+  height: 41vh;
+  position: relative;
+  /* visibility: hidden; */
+  display: none;
+  background-color: black;
+  /* display: flex; */
+  align-items: center;
+  /* justify-content: center; */
+  /* flex-direction: column; */
+}
+
+.rating-progress {
+  position: relative;
+  height: 26vh;
+  width: 15.6vw;
+  /* top: 2rem; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(#2ae863 3.6deg, #ededed15 0deg);
+}
+
+.rating-progress::before {
+  content: '';
+  position: absolute;
+  height: 22vh;
+  width: 13.5vw;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.rating-value {
+  position: relative;
+  font-size: 30px;
+}
+
+.card-effect {
+  transition: 0.4s;
+}
+
+.card-effect:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  .imgage-div {
+    /* display: none; */
+    visibility: hidden;
+  }
+  .rating-div {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+} 
+
+
+/* .cards {
   width: 17rem;
   height: 450px;
 }
@@ -327,7 +433,6 @@ body {
 }
 
 .rating-div {
-  /* width: 100%; */
   width: 17rem;
   height: 420px;
   position: relative;
@@ -401,11 +506,11 @@ body {
   transform: scale(1.1);
   cursor: pointer;
   .imgage-div {
-    visibility: hidden;
+    display: none;
   }
   .rating-div {
     position: absolute;
     top: 0;
     visibility: visible;
   }
-} 
+}  */
