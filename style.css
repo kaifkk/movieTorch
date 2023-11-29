@@ -309,20 +309,21 @@ body {
 
 .card-wrapper {
   position: absolute;
-  top: 25rem;
-  right: 5rem;
+  top: 53vh;
+  right: 4rem;
   padding: 10px;
   transform: translate(0, -50%);
   display: flex;
-  justify-content: space-between;
-  width: 88vw;
-  overflow-y: hidden;
+  justify-content: space-around;
+  width: 94vw;
+  /* overflow-y: hidden; */
+  overflow: hidden;
   /* background-color: green; */
 }
 
 .cards {
   height: 43vh;
-  width: 12.7rem;
+  width: 12.7vw;
   position: relative;
 }
 
@@ -332,6 +333,7 @@ body {
 
 .img {
   height: 42vh;
+  width: 12.7vw;
   object-fit: cover;
 }
 
@@ -361,7 +363,7 @@ body {
 }
 
 .rating-div {
-  width: 12.7rem;
+  width: 12.7vw;
   height: 41vh;
   position: relative;
   /* visibility: hidden; */
@@ -376,7 +378,7 @@ body {
 .rating-progress {
   position: relative;
   height: 26vh;
-  width: 15.6vw;
+  width: 12vw;
   /* top: 2rem; */
   border-radius: 50%;
   display: flex;
@@ -389,7 +391,7 @@ body {
   content: '';
   position: absolute;
   height: 22vh;
-  width: 13.5vw;
+  width: 10vw;
   border-radius: 50%;
   background-color: black;
 }
@@ -414,7 +416,7 @@ body {
     cursor: pointer;
     position: absolute;
     top: 0;
-    visibility: visible;
+    /* visibility: visible; */
     display: flex;
     align-items: center;
     justify-content: center;
